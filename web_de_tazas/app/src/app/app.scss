@@ -1,0 +1,235 @@
+
+//pc
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.page {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(135deg, #35373e, #666974);
+  box-sizing: border-box;
+
+}
+//antes del contendo
+.badge{
+  display:inline-block;
+  padding: 7px 15px;
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  color:#d8c8ff;
+  margin-bottom:12px;
+}
+
+//despues del contenido
+.stats {
+  display: flex;
+  gap: 20px;        
+  margin-top: 10px; 
+  flex-wrap: wrap;  /* si no caben, bajan pero no se cortan */
+}
+
+.stat h3 {
+  font-size: 1.4rem; 
+}
+
+
+//todo el cuerpo de la pagina
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 20px 5px;
+
+  color: white;
+
+  flex: 1;
+}
+//solo la parte de las cards
+.contenedor-card {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 15px;
+}
+
+.cardabajo {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 20px; /* menos redondeado, ocupa menos altura */
+  background: rgba(22,24,34,.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.08);
+  color: white;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 8px 30px 16px !important; /* !important para pisar Material */
+  margin: 0 !important;
+}
+
+
+//en caso de que sea tablet o redusca la pantalla a 1024px
+@media (max-width: 1024px) {
+  .page {
+    height: 100vh; 
+    overflow-y: auto;
+  }
+  
+    .container {
+    padding: 40px;
+  }
+
+  .title1,
+  .title2 {
+    font-size: 40px;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+
+}
+
+//movile
+@media (max-width: 768px) {
+  .page {
+    height: 100vh; 
+    flex-direction: column;
+  }
+
+  .container {
+    min-height: auto;
+    overflow: visible;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 20px 30px;
+    gap: 20px;
+  }
+
+  //card en movil
+  mat-card-content {
+    flex-direction: column;
+    padding: 8px 16px 16px !important;
+  }
+}
+
+//resto de la pagina :v
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+
+
+.title1 {
+  font-size: clamp(1.4rem, 2.8vw, 5rem);
+  line-height: 1.0;   
+  margin-bottom: 6px; 
+  font-weight: 700;
+  color: #ffffff;
+  
+}
+
+.title2 {
+  background: linear-gradient(
+    90deg,
+    #a78bfa,
+    #f472b6
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: clamp(0.78rem, 1vw, 1.2rem);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+
+.btn-main {
+  height: 45px;
+  padding: 0 40px;
+  border-radius: 18px;
+  background: linear-gradient(90deg,#9b6dff,#f39ac7);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(167,139,250,.4);
+}
+
+.nose{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff
+}
+
+.extra {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(220px, 32vw, 450px); 
+  height: clamp(220px, 32vw, 450px);
+}
+
+/* círculo glow */
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(196,140,255,.5);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  box-shadow: 0 0 80px rgba(196,140,255,.15);
+}
+
+/* taza */
+.taza {
+  max-width: 100%;
+  max-height: 100%;
+}
