@@ -1,0 +1,140 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.162);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(6px);
+
+  z-index: 9999;
+}
+
+.modal {
+  width: 400px;
+  background: #666974;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(167,139,250,.15);
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: none;
+  border: none;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+//boton
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-main {
+  height: 45px;
+  padding: 0 40px;
+  border-radius: 18px;
+  background: linear-gradient(50deg,#9b6dff,#f39ac7);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 30px rgba(167,139,250,.4);
+}
+
+.toggle-password{
+
+  position: absolute;
+
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-125%);
+
+  background: transparent;
+  border: none;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  background: linear-gradient(50deg,#9b6dff,#f39ac7);
+  color: rgb(0, 0, 0);
+
+
+}
+
+//el input :v
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(22,24,34,.8);
+  color: #e9e2ec;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 80%;
+  box-sizing: border-box;
+  padding-right: 50px;
+}
+
+//color de la letra pero bonito
+
+.textcolorido{
+
+  font-size: clamp(1rem, 2vw, 4.3rem);
+  line-height: 1.0;
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(90deg,#a78bfa,#f472b6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title1 {
+  font-size: clamp(1rem, 2.4vw, 4rem);
+  line-height: 1.0;   
+  margin-bottom: 0px; 
+  font-weight: 500;
+  color: #e9e2ec;
+  
+}
+

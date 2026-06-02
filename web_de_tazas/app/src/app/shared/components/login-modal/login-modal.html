@@ -1,0 +1,29 @@
+<div class="overlay">
+  <div class="modal">
+
+    <button class="cerrar" (click)="cerrarModal()">
+      ✕
+    </button>
+
+    <h1 class="title1">Bienvenido continua para crear y personalizar tus tazas<br><br><span class="textcolorido">Iniciar Sesión</span></h1>
+
+    <p>Correo electrónico</p>
+
+    <input type="email" placeholder="Correo electrónico">
+
+    <p>Contraseña</p>
+    <div class="password-container">
+      <input [(ngModel)]="password"
+  [type]="hide() ? 'password' : 'text'"
+  placeholder="Contraseña"
+  maxlength="10">
+      <button type="button" class="toggle-password" (click)="clickEvent($event)" mat-raised-button color="accent">
+        <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }} </mat-icon>
+      </button>
+      <p>maximo 10 caracteres {{ password.length }}/10</p>
+    </div>
+
+    <button mat-raised-button  class="btn-main">Entrar</button>
+
+  </div>
+</div>

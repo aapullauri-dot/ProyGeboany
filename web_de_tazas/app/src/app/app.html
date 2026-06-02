@@ -15,9 +15,13 @@
     </p>
 
     <div class="actions">
-      <button mat-raised-button class="btn-main">       
+      <button mat-raised-button class="btn-main" (click)="abrirLogin()">       
         <span class="nose">Comenzar<mat-icon>arrow_forward</mat-icon> </span>
       </button>
+
+      @if (mostrarLogin) {
+        <app-login-modal (cerrar)="cerrarLogin()"> </app-login-modal>
+}
     </div>
 
     <div class="stats">
